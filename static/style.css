@@ -1,74 +1,69 @@
+* {
+  box-sizing: border-box;
+}
+
 html, body {
   margin: 0;
   padding: 0;
   height: 100%;
   font-family: 'Poppins', sans-serif;
-}
-
-/* BACKGROUND */
-body {
-  background:
-    radial-gradient(circle at top, #2b193d, #120021 70%),
-    linear-gradient(135deg, #3a0ca3, #7209b7);
-  display: flex;
-  justify-content: center;
-  align-items: center;
   overflow: hidden;
 }
 
-/* FIREWORKS CANVAS */
-canvas {
+body {
+  background: radial-gradient(circle at top, #2b0a3d, #12001f);
+}
+
+/* FIREWORKS */
+#canvas {
   position: fixed;
   inset: 0;
-  pointer-events: none;
+  width: 100vw;
+  height: 100vh;
   z-index: 0;
 }
 
 /* CARD */
 .message {
   position: relative;
-  width: 650px;
-  height: 430px;
-
-  /* ✅ FIXED IMAGE PATH */
-  background: url("card_bg.png") center/cover no-repeat;
-
-  border-radius: 28px;
-  box-shadow: 0 30px 80px rgba(0,0,0,0.6);
-  z-index: 10;
+  z-index: 2;
+  max-width: 420px;
+  width: 90%;
+  margin: 0 auto;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 22px;
   overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.45);
 }
 
-/* GLASS OVERLAY */
+/* CARD BACKGROUND IMAGE */
 .card-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(255,255,255,0.18);
-  backdrop-filter: blur(2px);
+  background: url("static/card_bg.png") center / cover no-repeat;
+  z-index: 1;
 }
 
-/* TEXT (LOCKED TO YELLOW AREA) */
+/* TEXT */
 .card-text {
-  position: absolute;
-  top: 40px;
-  left: 40px;
-  right: 40px;
-  max-height: 45%;
-  text-align: center;
+  position: relative;
   z-index: 2;
+  padding: 28px 22px;
+  text-align: center;
+  color: #2b1b3f;
 }
 
 .card-text h1 {
-  color: #2b1b3f;
+  font-size: 1.6rem;
+  margin-bottom: 12px;
   font-weight: 600;
-  margin-bottom: 18px;
 }
 
 .card-text p {
-  color: #1f1f1f;
-  font-size: 1.05rem;
-  line-height: 1.6;
-  margin-bottom: 12px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 10px 0;
 }
 
 .signature {
@@ -79,34 +74,29 @@ canvas {
 /* REPLAY BUTTON */
 .replay-btn {
   position: fixed;
-  bottom: 25px;
-  right: 25px;
-  padding: 10px 18px;
-  font-size: 0.95rem;
+  bottom: 16px;
+  right: 16px;
+  z-index: 3;
+  padding: 10px 16px;
+  font-size: 0.9rem;
   border-radius: 999px;
   border: none;
+  background: #ff4f9a;
+  color: #fff;
   cursor: pointer;
-  background: #ff5d8f;
-  color: white;
-  z-index: 20;
 }
 
-/* MOBILE */
-@media (max-width: 700px) {
+/* MOBILE FIX */
+@media (max-width: 480px) {
   .message {
-    width: 90%;
-    height: auto;
-    aspect-ratio: 3 / 4;
+    width: 92%;
   }
 
-  .card-text {
-    top: 25px;
-    left: 20px;
-    right: 20px;
-    max-height: 50%;
+  .card-text h1 {
+    font-size: 1.4rem;
   }
 
   .card-text p {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
 }
