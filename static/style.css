@@ -1,88 +1,36 @@
-* {
+body {
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-
-html, body {
-  width: 100%;
-  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle at top, #3b0a6f, #12001f);
   overflow: hidden;
-  background: radial-gradient(circle at top, #2a0a4a, #090012);
-}
-
-/* FIREWORK FULLSCREEN */
-.container,
-.stage-container,
-.canvas-container {
-  position: fixed;
-  inset: 0;
-  overflow: hidden;
-  z-index: 0;
 }
 
 canvas {
-  position: absolute;
-  inset: 0;
-}
-
-/* CARD */
-.message {
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0.95);
+  inset: 0;
+  z-index: 0;
+}
 
-  width: min(92vw, 420px);
+.message {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.card-text {
+  background: #ffffff;
   padding: 28px;
-  border-radius: 26px;
-
-  background: rgba(255, 255, 255, 0.96);
-  backdrop-filter: blur(14px);
-
-  box-shadow:
-    0 30px 80px rgba(0, 0, 0, 0.5),
-    0 0 0 1px rgba(255, 255, 255, 0.25);
-
-  z-index: 10;
+  border-radius: 22px;
+  max-width: 340px;
   text-align: center;
-  opacity: 0;
-  animation: cardEnter 1.2s ease forwards;
 }
 
-@keyframes cardEnter {
-  to {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
-  }
-}
-
-.message h1 {
-  font-size: 28px;
-  color: #4b2aad;
-  margin-bottom: 8px;
-}
-
-.sparkles {
-  font-size: 22px;
-  margin-bottom: 14px;
-}
-
-.message p {
-  font-size: 15px;
-  line-height: 1.6;
-  margin: 12px 0;
-  color: #333;
-}
-
-.highlight {
-  color: #d81b60;
-  font-weight: 600;
-}
-
-.signature {
-  margin-top: 12px;
-  font-size: 14px;
-  opacity: 0.8;
+.replay-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 3;
 }
