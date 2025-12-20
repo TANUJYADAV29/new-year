@@ -93,12 +93,12 @@ function animate() {
 // AUTO FIRE
 setInterval(() => launchShell(), 900);
 
-// TAP / CLICK TO EXPLODE
+// TAP / CLICK TO FIRE
 window.addEventListener("click", e => {
   launchShell(e.clientX);
 });
 
-// REPLAY BUTTON
+// REPLAY
 function restartFireworks() {
   shells = [];
   sparks = [];
