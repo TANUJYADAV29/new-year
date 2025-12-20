@@ -3,34 +3,45 @@
 <head>
   <meta charset="UTF-8" />
   <title>Happy New Year ✨</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="static/style.css">
 </head>
-
 <body>
 
-<canvas id="canvas"></canvas>
-
-<div class="message" id="card">
-  <div class="card-text">
-    <h1>Happy New Year ✨</h1>
-
-    <p>I hope this year brings you peace, growth, and moments that truly make you smile.</p>
-
-    <p>Wishing you success in everything you work hard for and happiness in everything you choose.</p>
-
-    <p>Have an amazing year ahead.</p>
-
-    <p class="love">Lucky to have you all ❤️</p>
-
-    <p class="signature">— from Tanuj 🤗</p>
-  </div>
+<!-- 🔥 FIREWORK BACKGROUND -->
+<div class="fireworks-container">
+  <canvas id="trails-canvas"></canvas>
+  <canvas id="main-canvas"></canvas>
 </div>
 
-<button class="replay-btn" onclick="replayFireworks()">Replay 🎆</button>
+<!-- 💌 NEW YEAR CARD -->
+<div class="message">
+  <h1>Happy New Year ✨</h1>
+  <div class="sparkles">✨✨</div>
 
-<script src="static/fireworks.js"></script>
+  <p>
+    I hope this year brings you peace, growth, and moments that truly make you smile.
+  </p>
+
+  <p>
+    Wishing you success in everything you work hard for and happiness in everything you choose.
+  </p>
+
+  <p>Have an amazing year ahead.</p>
+
+  <p class="highlight">Lucky to have you all ❤️</p>
+  <p class="signature">— from Tanuj 🤗</p>
+</div>
+
+<!-- REQUIRED LIBS (DO NOT REMOVE) -->
+<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/329180/fscreen%401.0.1.js"></script>
+<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/329180/Stage%400.1.4.js"></script>
+<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/329180/MyMath.js"></script>
+
+<!-- 🔥 NEW FIREWORK ENGINE -->
+<script src="static/fireworks-engine.js"></script>
+
 </body>
 </html>
