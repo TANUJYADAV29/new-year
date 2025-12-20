@@ -29,7 +29,7 @@ body {
   transform: translate(-50%, -50%) scale(0.92);
   width: min(92vw, 420px);
 
-  background-image: url("card_bg.png");
+/*  background-image: url("card_bg.png");*/
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -111,3 +111,4 @@ p {
     font-size: 0.88rem;
   }
 }
+
